@@ -29,8 +29,3 @@ spring:
       test-on-borrow: false
       test-on-return: false
       pool-prepared-statements: true
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:30000/eureka/
