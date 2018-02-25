@@ -1,5 +1,4 @@
 server:
-  port: 20000
   tomcat:
     uri-encoding: UTF-8
     max-threads: 800
@@ -8,8 +7,11 @@ server:
 spring:
   cloud:
     config:
-      uri: http://localhost:50000/
+      uri: http://localhost:60000/
       profile: t            # profile对应config server所获取的配置文件中的{profile}
+      label: master           # 指定Git仓库的分支，对应config server所获取的配置文件的{label}
+      username:
+      password:
   messages:
     basename: message
   jpa:
