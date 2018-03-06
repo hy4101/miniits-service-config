@@ -1,3 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    #healthcheck:
+      #enabled: true
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 9
+
 95xk_status: false
 SUP71_status: false
 adminPath: /xkmgr
