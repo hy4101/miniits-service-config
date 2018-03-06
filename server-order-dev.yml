@@ -73,9 +73,9 @@ sms:
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        password: Update##88
-        url: jdbc:mysql://192.168.1.252/xksj?useUnicode=true&characterEncoding=utf-8
-        username: xksj
+        password: 123
+        url: jdbc:mysql://192.168.1.2:3306/xksj?useUnicode=true&characterEncoding=utf-8
+        username: root
     devtools:
         livereload:
             enabled: true
@@ -101,8 +101,8 @@ spring:
                 show_sql: true
     redis:
         database: 2
-        host: 127.0.0.1
-        password: ''
+        host: 192.168.1.113
+        password: UnionExpress.Service.Mysql.2016
         pool:
             max-active: 8
             max-idle: 8
