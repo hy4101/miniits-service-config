@@ -29,9 +29,9 @@ mybatis:
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        password: YOKU@3220@js
-        url: jdbc:mysql://172.18.53.144:45151/xksjDB?useUnicode=true&characterEncoding=utf-8
-        username: xksj
+        password: 123
+        url: jdbc:mysql://127.0.0.1:3306/ms?useUnicode=true&characterEncoding=utf-8
+        username: root
     devtools:
         livereload:
             enabled: true
