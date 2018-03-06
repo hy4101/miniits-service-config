@@ -71,49 +71,59 @@ sms:
     apikey: ff6f0a1ce128937fce13d1301a546b6b
     tplid: 1588380
 spring:
-    datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        password: 123
-        url: jdbc:mysql://192.168.1.2:3306/ms?useUnicode=true&characterEncoding=utf-8
-        username: root
-    devtools:
-        livereload:
-            enabled: true
-        remote:
-            debug:
-                enabled: true
-                local-port: 8007
-            secret: 1234
-        restart:
-            enabled: true
-            exclude: static/**
-    freemarker:
-        cache: false
-        charset: UTF-8
-        check-template-location: true
-        content-type: text/html
-        enabled: true
-        suffix: .html
-        template-loader-path: classpath:/templates/
-    jpa:
-        properties:
-            hibernate:
-                show_sql: true
-    redis:
-        database: 2
-        host: 192.168.1.113
-        password: UnionExpress.Service.Mysql.2016
-        pool:
-            max-active: 8
-            max-idle: 8
-            max-wait: -1
-            min-idle: 0
-        port: 6379
-        timeout: 0
-    session:
-        store-type: redis
-    zipkin:
-        base-url: http://localhost:9411
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ms?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123
+    druid:
+      initial-size: 50
+      min-idle: 50
+      max-active: 1000
+      max-wait: 60000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+  devtools:
+      livereload:
+          enabled: true
+      remote:
+          debug:
+              enabled: true
+              local-port: 8007
+          secret: 1234
+      restart:
+          enabled: true
+          exclude: static/**
+  freemarker:
+      cache: false
+      charset: UTF-8
+      check-template-location: true
+      content-type: text/html
+      enabled: true
+      suffix: .html
+      template-loader-path: classpath:/templates/
+  jpa:
+      properties:
+          hibernate:
+              show_sql: true
+  redis:
+      database: 2
+      host: 192.168.1.113
+      password: UnionExpress.Service.Mysql.2016
+      pool:
+          max-active: 8
+          max-idle: 8
+          max-wait: -1
+          min-idle: 0
+      port: 6379
+      timeout: 0
+  session:
+      store-type: redis
+  zipkin:
+      base-url: http://localhost:9411
 supcan:
     useCache: false
 sys:
