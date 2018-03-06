@@ -34,20 +34,7 @@ logging:
                 mapper: TRACE
 mybatis:
     config-location: classpath:mybatis-config.xml
-server:
-    port: 8083
 spring:
-    application:
-        name: service-usercenter
-    cloud:
-        config:
-            discovery:
-                enabled: true
-                serviceId: config-server
-            label: master
-            password: ds686yf
-            profile: dev
-            username: tanmashan
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
         password: YOKU@3220@js
