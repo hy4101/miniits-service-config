@@ -11,47 +11,55 @@ eureka:
     lease-expiration-duration-in-seconds: 9
 
 security:
-    basic:
-        enabled: true
-    user:
-        name: tanmashan
-        password: ds686yf
+  basic:
+      enabled: true
+  user:
+      name: tanmashan
+      password: ds686yf
 spring:
-    datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        password: 123
-        url: jdbc:mysql://127.0.0.1:3306/ms?useUnicode=true&characterEncoding=utf-8
-        username: root
-    devtools:
-        livereload:
-            enabled: true
-        remote:
-            debug:
-                enabled: true
-                local-port: 8007
-            secret: 1234
-        restart:
-            enabled: true
-            exclude: static/**
-    jpa:
-        hibernate:
-            ddl-auto: update
-            naming:
-                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-        open-in-view: true
-        properties:
-            hibernate:
-                show_sql: true
-    profiles:
-        active: dev
-    redis:
-        database: 0
-        host: 127.0.0.1
-        password: ''
-        pool:
-            max-active: 8
-            max-idle: 8
-            max-wait: -1
-            min-idle: 0
-        port: 6379
-        timeout: 0
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ms?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123
+    druid:
+      initial-size: 50
+      min-idle: 50
+      max-active: 1000
+      max-wait: 60000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+  devtools:
+      livereload:
+          enabled: true
+      remote:
+          debug:
+              enabled: true
+              local-port: 8007
+          secret: 1234
+      restart:
+          enabled: true
+          exclude: static/**
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      show_sql: true
+  profiles:
+      active: dev
+  redis:
+      database: 0
+      host: 127.0.0.1
+      password: ''
+      pool:
+          max-active: 8
+          max-idle: 8
+          max-wait: -1
+          min-idle: 0
+      port: 6379
+      timeout: 0
