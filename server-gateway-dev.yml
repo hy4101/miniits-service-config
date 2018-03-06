@@ -1,4 +1,4 @@
-server-gateway-test: 123
+servergatewaytest: 123
 
 eureka:
   client:
