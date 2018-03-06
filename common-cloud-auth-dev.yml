@@ -23,10 +23,6 @@ spring:
       test-on-borrow: false
       test-on-return: false
       pool-prepared-statements: true
-      stat-view-servlet:
-        enabled: true
-        login-username: lmsy
-        login-password: lmsy_56_union
 
 #spring:
 #  datasource:
