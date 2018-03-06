@@ -1,11 +1,15 @@
 eureka:
-    client:
-        fetch-registry: true
-        register-with-eureka: true
-        serviceUrl:
-            defaultZone: http://thy:1234qwer@192.168.1.119:8761/eureka/
-    instance:
-        hostname: 192.168.1.187
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    #healthcheck:
+      #enabled: true
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 9
+
 feign:
     hystrix:
         enabled: true
