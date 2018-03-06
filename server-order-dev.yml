@@ -16,17 +16,17 @@ adminPath: /xkmgr
 agent_status: server
 batchorderurl_topagent: http://192.168.1.118:8080/xkpt/xk/cardpay/cardpaymentbybatchno
 cas:
-    project:
-        url: http://127.0.0.1:8080/xkpt
-    server:
-        url: http://127.0.0.1:8180/cas
+  project:
+    url: http://127.0.0.1:8080/xkpt
+  server:
+    url: http://127.0.0.1:8180/cas
 copyrightYear: 2016-2018
 demoMode: false
 ehcache:
-    configFile: cache/ehcache-local.xml
+  configFile: cache/ehcache-local.xml
 feign:
-    hystrix:
-        enabled: true
+  hystrix:
+    enabled: true
 frontPath: /xk
 getpurchaseurl_topagent: http://192.168.1.118:8080/xkpt/xk/cardpay/cardpaygetpurchase
 key3des_dingxin: asda123sddf123hmmpiu123123
@@ -38,38 +38,38 @@ keystr_oufei: sHvTrPfeLvN7dYZIL75sIDAoddnK3KU3
 keystr_yintong: 950bcde560d348e48e54188456cf2a0f
 keystr_yiqiyou: 18001e89c71f4b4a97dc677a266680b3
 logging:
-    level:
-        sample:
-            mybatis:
-                mapper: TRACE
+  level:
+    sample:
+      mybatis:
+        mapper: TRACE
 mail:
-    account: admin@129ka.com
-    password: Huang0597!@#qqexmail*&^
+  account: admin@129ka.com
+  password: Huang0597!@#qqexmail*&^
 mobilePath: /mobile
 mybatis:
-    config-location: classpath:mybatis-config.xml
+  config-location: classpath:mybatis-config.xml
 notAllowRefreshIndex: false
 oa:
-    notify:
-        remind:
-            interval: 60000
+  notify:
+    remind:
+      interval: 60000
 order:
-    server:
-        key: ff6f0a1ce128937fce13d1301a546b6b
+  server:
+    key: ff6f0a1ce128937fce13d1301a546b6b
 orderqueryurl_topagent: http://192.168.1.118:8080/xkpt/xk/cardpay/cardpayorderquery
 orderurl_topagent: http://192.168.1.118:8080/xkpt/xk/cardpay/cardpayment
 page:
-    pageSize: 30
+  pageSize: 30
 productName: 九五至尊销卡
 projectPath: D:\AutoCreate
 scheduled_key: ff6f0a1ce128937fce13d1301a546b6b
 scheduled_key2: ff6f0a1ce128937fce13d1301a546b6c
 session:
-    sessionTimeout: 7200000
-    sessionTimeoutClean: 120000
+  sessionTimeout: 7200000
+  sessionTimeoutClean: 120000
 sms:
-    apikey: ff6f0a1ce128937fce13d1301a546b6b
-    tplid: 1588380
+  apikey: ff6f0a1ce128937fce13d1301a546b6b
+  tplid: 1588380
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -87,24 +87,24 @@ spring:
       test-on-return: false
       pool-prepared-statements: true
   devtools:
-      livereload:
-          enabled: true
-      remote:
-          debug:
-              enabled: true
-              local-port: 8007
-          secret: 1234
-      restart:
-          enabled: true
-          exclude: static/**
-  freemarker:
-      cache: false
-      charset: UTF-8
-      check-template-location: true
-      content-type: text/html
+    livereload:
       enabled: true
-      suffix: .html
-      template-loader-path: classpath:/templates/
+    remote:
+      debug:
+        enabled: true
+        local-port: 8007
+      secret: 1234
+    restart:
+      enabled: true
+      exclude: static/**
+  freemarker:
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    suffix: .html
+    template-loader-path: classpath:/templates/
   jpa:
     show-sql: true
     generate-ddl: true
@@ -113,29 +113,29 @@ spring:
     properties:
       show_sql: true
   redis:
-      database: 2
-      host: 192.168.1.113
-      password: UnionExpress.Service.Mysql.2016
-      pool:
-          max-active: 8
-          max-idle: 8
-          max-wait: -1
-          min-idle: 0
-      port: 6379
-      timeout: 0
+    database: 2
+    host: 192.168.1.113
+    password: UnionExpress.Service.Mysql.2016
+    pool:
+      max-active: 8
+      max-idle: 8
+      max-wait: -1
+      min-idle: 0
+    port: 6379
+    timeout: 0
   session:
-      store-type: redis
+    store-type: redis
   zipkin:
-      base-url: http://localhost:9411
+    base-url: http://localhost:9411
 supcan:
-    useCache: false
+  useCache: false
 sys:
-    key: b6tw3&2kwg
+  key: b6tw3&2kwg
 urlSuffix: .html
 user:
-    multiAccountLogin: true
+  multiAccountLogin: true
 userfiles:
-    basedir: /static/upload/
+  basedir: /static/upload/
 userid_51ka: 10052
 userid_71sup: 1214
 userid_dingxin: 8001002266
@@ -145,11 +145,11 @@ userid_yintong: 3273
 userid_yiqiyou: 1353
 version: V2.2.6
 web:
-    maxUploadSize: 10485760
-    server:
-        url: http://www.129ka.com/
-    staticFile: .css,.js,.png,.jpg,.gif,.jpeg,.bmp,.ico,.swf,.psd,.htc,.htm,.html,.crx,.xpi,.exe,.ipa,.apk
-    view:
-        index: /xk
-        prefix: /WEB-INF/views/
-        suffix: .jsp
+  maxUploadSize: 10485760
+  server:
+    url: http://www.129ka.com/
+  staticFile: .css,.js,.png,.jpg,.gif,.jpeg,.bmp,.ico,.swf,.psd,.htc,.htm,.html,.crx,.xpi,.exe,.ipa,.apk
+  view:
+    index: /xk
+    prefix: /WEB-INF/views/
+    suffix: .jsp

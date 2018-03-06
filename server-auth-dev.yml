@@ -33,16 +33,16 @@ spring:
       test-on-return: false
       pool-prepared-statements: true
   devtools:
-      livereload:
-          enabled: true
-      remote:
-          debug:
-              enabled: true
-              local-port: 8007
-          secret: 1234
-      restart:
-          enabled: true
-          exclude: static/**
+    livereload:
+        enabled: true
+    remote:
+        debug:
+            enabled: true
+            local-port: 8007
+        secret: 1234
+    restart:
+        enabled: true
+        exclude: static/**
   jpa:
     show-sql: true
     generate-ddl: true
@@ -53,13 +53,13 @@ spring:
   profiles:
       active: dev
   redis:
-      database: 0
-      host: 192.168.1.113
-      password: UnionExpress.Service.Mysql.2016
-      pool:
-          max-active: 8
-          max-idle: 8
-          max-wait: -1
-          min-idle: 0
-      port: 6379
-      timeout: 0
+    database: 0
+    host: 192.168.1.113
+    password: UnionExpress.Service.Mysql.2016
+    pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+    port: 6379
+    timeout: 0
