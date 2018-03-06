@@ -5,21 +5,21 @@ spring:
     password: 123
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
-    show-sql: true
+#    show-sql: true
     hibernate:
       ddl-auto: update
     open-in-view: true
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-  devtools:
-    remote:
-      secret: 1234
-      debug:
-        enabled: true
-        local-port: 8007
-    livereload:
-      enabled: true
-    restart:
-      enabled: true
-      exclude: static/**
+#  devtools:
+#    remote:
+#      secret: 1234
+#      debug:
+#        enabled: true
+#        local-port: 8007
+#    livereload:
+#      enabled: true
+#    restart:
+#      enabled: true
+#      exclude: static/**
