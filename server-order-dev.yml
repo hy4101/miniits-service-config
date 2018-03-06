@@ -74,7 +74,7 @@ spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
         password: 123
-        url: jdbc:mysql://192.168.1.2:3306/xksj?useUnicode=true&characterEncoding=utf-8
+        url: jdbc:mysql://192.168.1.2:3306/ms?useUnicode=true&characterEncoding=utf-8
         username: root
     devtools:
         livereload:
