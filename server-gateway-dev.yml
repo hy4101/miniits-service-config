@@ -1,0 +1,35 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    #healthcheck:
+      #enabled: true
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 9
+
+management:
+  security:
+    enabled: false
+zuul:
+  ignored-services: *
+  routes:
+    order1:
+      path: /order1/**
+      serviceId: SERVICE-ORDER1
+  retryable: true
+
+ribbon:
+  MaxAutoRetries: 2
+  ConnectTimeout: 60000
+  ReadTimeout: 60000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 180000
