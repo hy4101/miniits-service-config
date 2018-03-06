@@ -12,14 +12,6 @@ eureka:
 
 SMS_APIKEY: 123
 SMS_TPLID: 123
-eureka:
-    client:
-        fetch-registry: true
-        register-with-eureka: true
-        serviceUrl:
-            defaultZone: http://tanmashan:ds686yf@127.0.0.1:8761/eureka/
-    instance:
-        hostname: 127.0.0.1
 feign:
     hystrix:
         enabled: true
