@@ -106,9 +106,12 @@ spring:
       suffix: .html
       template-loader-path: classpath:/templates/
   jpa:
-      properties:
-          hibernate:
-              show_sql: true
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      show_sql: true
   redis:
       database: 2
       host: 192.168.1.113
